@@ -4,18 +4,18 @@ My Packer Template Example
 Usage
 -------------
 
-### In local environments
+### In Local
 
-build box for vagrant on the local environment.
+build box for vagrant at the local.
 
 ```
 packer build template_local.json
 ```
 
 
-### In Atlas environments
+### In Atlas
 
-Push to build box file for vagrant on the atlas
+Push to build box for vagrant at the atlas
 
 ```
 packer push -name USERNAME/ATLASBUILD_NAME template_atlas.json
