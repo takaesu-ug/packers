@@ -23,6 +23,9 @@ Push to build box for vagrant at the atlas.
 packer push -name USERNAME/ATLASBUILD_NAME template_atlas.json
 ```
 
+NOTE: Add double-array in post-procesors with using Atlas. Refer below.
+
+* [Missing metadata.json (Packer (push) -> ATLAS (build) -> Vagrant (download)) · Issue #2090 · mitchellh/packer](https://github.com/mitchellh/packer/issues/2090)
 
 Thanks
 -------------

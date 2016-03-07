@@ -4,24 +4,26 @@
     "atlas_name": "{{env `ATLAS_NAME`}}"
   },
   "post-processors": [
-    {
-      "type": "vagrant",
-      "override": {
-        "virtualbox": {
-          "output": "centos-7-0-x64-virtualbox.box"
+    [
+      {
+        "type": "vagrant",
+        "override": {
+          "virtualbox": {
+            "output": "centos-7-0-x64-virtualbox.box"
+          }
+        }
+      },
+      {
+        "type": "atlas",
+        "only": ["virtualbox-iso"],
+        "artifact": "{{user `atlas_username`}}/{{user `atlas_name`}}",
+        "artifact_type": "vagrant.box",
+        "metadata": {
+          "provider": "virtualbox",
+          "version": "0.0.1"
         }
       }
-    },
-    {
-      "type": "atlas",
-      "only": ["virtualbox-iso"],
-      "artifact": "{{user `atlas_username`}}/{{user `atlas_name`}}",
-      "artifact_type": "vagrant.box",
-      "metadata": {
-        "provider": "virtualbox",
-        "version": "0.0.1"
-      }
-    }
+    ]
   ],
   "provisioners": [
     {
