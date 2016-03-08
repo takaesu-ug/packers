@@ -1,6 +1,11 @@
 My Packer Template Example
 ==============
 
+Builded boxes
+------------
+
+https://atlas.hashicorp.com/yusabana
+
 Usage
 -------------
 
@@ -11,7 +16,6 @@ Build box for vagrant at the local.
 ```
 packer build template_local.json
 ```
-
 
 ### In Atlas
 
